@@ -28,11 +28,11 @@ function echoEvent($datatext) {
 
 if(isset($_GET["upload"]))
 {
-	$proc = popen("doas pihole -d -a -w", "r");
+	$proc = popen("/usr/local/bin/doas /usr/local/bin/pihole -d -a -w", "r");
 }
 else
 {
-	$proc = popen("doas pihole -d -w", "r");
+	$proc = popen("/usr/local/bin/doas /usr/local/bin/pihole -d -w", "r");
 }
 while (!feof($proc)) {
     echoEvent(fread($proc, 4096));

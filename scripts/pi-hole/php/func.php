@@ -143,7 +143,7 @@ function pihole_execute($argument_string, $error_on_failure = true) {
     $escaped = escapeshellcmd($argument_string);
     $output = null;
     $return_status = -1;
-    $command = "doas pihole " . $escaped;
+    $command = "/usr/local/bin/doas /usr/local/bin/pihole " . $escaped;
     exec($command, $output, $return_status);
     if($return_status !== 0)
     {

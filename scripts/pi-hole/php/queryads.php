@@ -52,7 +52,7 @@ else
     $exact = "";
 }
 
-$proc = popen("doas pihole -q -adlist ".$url." ".$exact, 'r');
+$proc = popen("/usr/local/bin/doas /usr/local/bin/pihole -q -adlist ".$url." ".$exact, 'r');
 while (!feof($proc)) {
     echoEvent(fread($proc, 4096));
 }

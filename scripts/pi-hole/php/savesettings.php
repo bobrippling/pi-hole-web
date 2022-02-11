@@ -498,7 +498,7 @@ function addStaticDHCPLease($mac, $ip, $hostname) {
 				{
 					global $available_themes;
 					if(array_key_exists($_POST["webtheme"], $available_themes))
-						exec('doas pihole -a theme '.$_POST["webtheme"]);
+						exec('/usr/local/bin/doas /usr/local/bin/pihole -a theme '.$_POST["webtheme"]);
 				}
 				$success .= "The webUI settings have been updated";
 				break;
