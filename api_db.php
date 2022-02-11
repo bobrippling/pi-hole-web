@@ -20,7 +20,7 @@ ini_set("max_execution_time","600");
 $data = array();
 
 // Needs package php5-sqlite, e.g.
-//    sudo apt-get install php5-sqlite
+//    doas apt-get install php5-sqlite
 
 $QUERYDB = getQueriesDBFilename();
 $db = SQLite3_connect($QUERYDB);

@@ -67,7 +67,7 @@
                   password cannot be retrieved later on, but it is possible to set a new password (or explicitly disable
                   the password by setting an empty password) using the command
                 </p>
-                <pre>sudo pihole -a -p</pre>
+                <pre>doas pihole -a -p</pre>
               </div>
             </div>
           </div>

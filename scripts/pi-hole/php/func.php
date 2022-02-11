@@ -132,7 +132,7 @@ if(!function_exists('hash_equals')) {
  *
  * would execute command
  *
- *   sudo pihole -h
+ *   doas pihole -h
  *
  * and returns output of that command as a string.
  *
@@ -143,7 +143,7 @@ function pihole_execute($argument_string, $error_on_failure = true) {
     $escaped = escapeshellcmd($argument_string);
     $output = null;
     $return_status = -1;
-    $command = "sudo pihole " . $escaped;
+    $command = "doas pihole " . $escaped;
     exec($command, $output, $return_status);
     if($return_status !== 0)
     {
